@@ -1,3 +1,0 @@
-"# Dani" 
-"# Dani" 
-"# Augustin" 
