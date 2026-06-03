@@ -1,293 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ShopEasy </title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#f5f5f5;
-    }
-
-    /* Navbar */
-    nav{
-      background:#ff3f6c;
-      padding:15px 40px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      color:white;
-      position:sticky;
-      top:0;
-    }
-
-    nav h1{
-      font-size:32px;
-    }
-
-    nav input{
-      width:40%;
-      padding:10px;
-      border:none;
-      border-radius:8px;
-      outline:none;
-    }
-
-    nav button{
-      padding:10px 20px;
-      border:none;
-      border-radius:8px;
-      background:white;
-      color:#ff3f6c;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    /* Hero Section */
-    .hero{
-      background:linear-gradient(to right,#ff3f6c,#8e44ad);
-      color:white;
-      text-align:center;
-      padding:80px 20px;
-    }
-
-    .hero h2{
-      font-size:50px;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:20px;
-    }
-
-    .hero button{
-      padding:15px 30px;
-      border:none;
-      border-radius:12px;
-      background:white;
-      color:#ff3f6c;
-      font-size:18px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    /* Products */
-    .products{
-      padding:50px;
-    }
-
-    .products h2{
-      margin-bottom:30px;
-      font-size:35px;
-    }
-
-    .product-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-    }
-
-    .card img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:20px;
-    }
-
-    .card-content h3{
-      margin-bottom:10px;
-    }
-
-    .price{
-      color:#ff3f6c;
-      font-size:24px;
-      font-weight:bold;
-      margin-bottom:15px;
-    }
-
-    .card-content button{
-      width:100%;
-      padding:12px;
-      border:none;
-      border-radius:10px;
-      background:#ff3f6c;
-      color:white;
-      font-size:16px;
-      cursor:pointer;
-    }
-
-    footer{
-      background:black;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <h1>ShopEasy</h1>
+    <!-- Navbar -->
+    <nav>
+        <h1>ShopEasy</h1>
+        <input type="text" placeholder="Search products...">
+        <button>Cart</button>
+    </nav>
 
-    <input type="text" placeholder="Search products...">
+    <!-- Hero Section -->
+    <section class="hero">
+        <marquee scrollamount="20">
+            <h2>Biggest Shopping Sale</h2>
+        </marquee>
+        <p>Fashion • Electronics • Accessories</p>
+        <button>Shop Now</button>
+    </section>
 
-    <button>Cart</button>
-  </nav>
+    <!-- Products -->
+    <section class="products">
+        <h2>Trending Products</h2>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <marquee scrollamount="20"><h2>Biggest Shopping Sale</h2></marquee>
-    <p>Fashion • Electronics • Accessories</p>
-    <button>Shop Now</button>
-  </section>
+        <div class="product-grid">
 
-  <!-- Products -->
-  <section class="products">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800" alt="Hoodie">
+                <div class="card-content">
+                    <h3>Stylish Hoodie</h3>
+                    <div class="price">₹899</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
 
-    <h2>Trending Products</h2>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800" alt="Shoes">
+                <div class="card-content">
+                    <h3>Sports Shoes</h3>
+                    <div class="price">₹1799</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
 
-    <div class="product-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800" alt="Watch">
+                <div class="card-content">
+                    <h3>Smart Watch</h3>
+                    <div class="price">₹2299</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
 
-      <!-- Product 1 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800" alt="hoodie">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=800" alt="Headphones">
+                <div class="card-content">
+                    <h3>Wireless Headphones</h3>
+                    <div class="price">₹1499</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
 
-        <div class="card-content">
-          <h3>Stylish Hoodie</h3>
-          <div class="price">₹899</div>
-          <button>Add to Cart</button>
         </div>
-      </div>
+    </section>
 
-      <!-- Product 2 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800" alt="shoes">
+    <!-- Student Table -->
+    <section class="table-section">
+        <h2>Student Table</h2>
 
-        <div class="card-content">
-          <h3>Sports Shoes</h3>
-          <div class="price">₹1799</div>
-          <button>Add to Cart</button>
-        </div>
-      </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
 
-      <!-- Product 3 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800" alt="watch">
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>20</td>
+            </tr>
 
-        <div class="card-content">
-          <h3>Smart Watch</h3>
-          <div class="price">₹2299</div>
-          <button>Add to Cart</button>
-        </div>
-      </div>
+            <tr>
+                <td>2</td>
+                <td>Alice</td>
+                <td>22</td>
+            </tr>
 
-      <!-- Product 4 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=800" alt="headphone">
+            <tr>
+                <td>3</td>
+                <td>Bob</td>
+                <td>21</td>
+            </tr>
+        </table>
+    </section>
 
-        <div class="card-content">
-          <h3>Wireless Headphones</h3>
-          <div class="price">₹1499</div>
-          <button>Add to Cart</button>
-        </div>
-      </div>
+    <!-- Lists -->
+    <section class="lists">
 
-    </div>
+        <h2>Ordered List</h2>
 
-  </section>
+        <ol type="A">
+            <li>Varun</li>
+            <li>Benadic</li>
+            <li>Dani</li>
+            <li>Aravind</li>
+        </ol>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 ShopEasy. All Rights Reserved.</p>
-  </footer>
+        <h2>Unordered List</h2>
+
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Papaya</li>
+        </ul>
+
+    </section>
+
+    <footer>
+        <p>© 2026 ShopEasy. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
-<!-------front-end-------->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HTML Table Example</title>
-  <style>
-    table {
-      width: 50%;
-      border-collapse: collapse;
-    }
+<link rel="stylesheet" href="css/style.css">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
+body{
+    background:#f5f5f5;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
-</head>
-<body>
-  <h2>Student Table</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>John</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Alice</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Bob</td>
-      <td>21</td>
-    </tr>
-  </table>
-</body>
-</html>
-<centre><h1>order list</h1></centre>
-<ol type="A">
-  <li>varun</li>
-  <li>benadic</li>
-  <li>dani</li>
-  <li>arvaind</li>
-</ol>
-<h1>unorder list</h1>
-<ul>
-   <li>apple</li>
-   <li>ornge</li>
-   <li>papaya</li>
-</ul>
+/* Navbar */
+nav{
+    background:#ff3f6c;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+nav h1{
+    font-size:32px;
+}
+
+nav input{
+    width:40%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+
+nav button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    color:#ff3f6c;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(to right,#ff3f6c,#8e44ad);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:50px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.hero button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#ff3f6c;
+    font-weight:bold;
+}
+
+/* Products */
+.products{
+    padding:50px;
+}
+
+.products h2{
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.price{
+    color:#ff3f6c;
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.card-content button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#ff3f6c;
+    color:white;
+}
+
+/* Table */
+.table-section{
+    padding:40px;
+    text-align:center;
+}
+
+table{
+    width:60%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+th{
+    background:#ff3f6c;
+    color:white;
+}
+
+/* Lists */
+.lists{
+    padding:40px;
+}
+
+.lists h2{
+    margin:20px 0;
+}
+
+ol,ul{
+    margin-left:40px;
+    line-height:35px;
+}
+
+/* Footer */
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
